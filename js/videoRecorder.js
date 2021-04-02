@@ -35,7 +35,7 @@ function startRecording(stream, lengthInMS) {
     });
   
     let recorded = wait(lengthInMS).then(() => {
-        recorder.state == "recording" && stop(preview.srcObject)
+        recorder.state == "recording" && stopVideo(preview.srcObject)
         recordNumber = recordNumber+ 1;
     }
     );
@@ -46,7 +46,7 @@ function startRecording(stream, lengthInMS) {
     ])
     .then(() => data);
 }
-function stop(stream) {
+function stopVideo(stream) {
     videoLoading.style.display = "block";
     preview.style.display="none";
     stream.getTracks().forEach(track => track.stop());
@@ -78,5 +78,5 @@ startButton.addEventListener("click", function() {
     .catch((err)=>console.log(err));
 }, false);
 stopButton.addEventListener("click", function() {
-    stop(preview.srcObject);
+  stopVideo(preview.srcObject);
 }, false);

@@ -60,7 +60,7 @@ audioStartButton.addEventListener("click", function() {
       return new Promise(resolve => audioPreview.onplaying = resolve);
     }).then(() => startAudioRecording(audioPreview.captureStream(), audioRecordingTimeMS))
     .then (recordedChunks => {
-      videoLoading.style.display = "block";
+      audioLoading.style.display = "block";
       let recordedBlob = new Blob(recordedChunks, { type: "audio/mp3" });
       audioRecording.src = URL.createObjectURL(recordedBlob);
       audioLoading.style.display = "none";

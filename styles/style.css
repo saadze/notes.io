@@ -7,16 +7,15 @@ body{
 }
 
 #container{
-    padding: 20px 20px 0 20px;
-    width: 25%;
-    min-height: 400px;
+    padding: 20px;
+    display: flex;
     text-align: center;
     border-radius: 30px;
     margin: auto;
 }
 #form{
     text-align: center;
-    width: 100%;
+    flex:1;
     display: flex;
     flex-direction: column;
     gap:10px;
@@ -141,8 +140,7 @@ button{
     flex: 1;
 }
 #result-list{
-    width: 100%;
-    margin-top: 10px;
+    flex: 3;
 }
 .ToDo{
     display: flex;
@@ -179,6 +177,7 @@ button{
 }
 #video-loader #audio-loader{
     text-align: center;
+    margin: auto;
     width: 100px;
 }
 @keyframes spin {
