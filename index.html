@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/style.css">
+        <title>HAMOUDA TEST</title>
+    </head>
+    <body>
+        <div id='container'>
+            <h1>NOTES.IO</h1>
+            <div id="form">
+                <input type="text" id="message" placeholder="Title">
+                <div id="options">
+                    <div id="options-buttons">
+                        <button onclick="showHideTextBar()">Add Text</button>
+                        <button onclick="showHideAudio()" id="audio-option">Add Audio</button>
+                        <button onclick="showHideVideo()">Add Video</button>
+                    </div>
+                    <span id="text-writer" role="textbox" contenteditable></span>
+                    <div id="audio-recorder">
+                        <p>Audio</p>
+                        <div>
+                            <button id="audio-record">Record</button>
+                            <button id="audio-stop">Stop</button>
+                        </div>
+                        <audio id="audio-preview" autoplay muted controls></audio>
+                        <div id="audio-loader" style="display: none;" class="loader"></div>
+                        <audio id="audio-bar" controls></audio>
+                    </div>
+                    <div id="video-preview">
+                        <p>Video</p>
+                        <div id="video-control">
+                            <button id="video-record">Record</button>
+                            <button id="video-stop">Stop</button>
+                        </div>
+                        <video id="video-previewer" autoplay muted></video>
+                        <div id="video-loader" style="display: none;" class="loader"></div>
+                        <video controls id="video-recorder"></video>
+                        </video>
+                    </div>
+                </div>
+                <button id="validation-button">Save</button>
+            </div>
+            <div id="result-list">
+            </div>
+        </div>
+    </body>
+    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/audioRecorder.js"></script>
+    <script src="js/videoRecorder.js"></script>
+</html>
