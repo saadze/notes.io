@@ -5,7 +5,12 @@
 body{
     background-color: steelblue;
 }
-
+nav{
+    width: 100%;
+    display: flex;
+    background-color: white;
+    padding: 20px;
+}
 #container{
     padding: 20px;
     display: flex;
@@ -25,7 +30,8 @@ h1,h2,h3,h4,p,li,span{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 h1{
-    padding: 10px;
+    padding: 0;
+    color: black;
 }
 input{
     background-color:white;
